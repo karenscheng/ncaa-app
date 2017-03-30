@@ -11,6 +11,11 @@
 |
 */
 
+use Illuminate\Http\Request;
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/players', 'PlayerController@index');
+Route::post('/players', 'PlayerController@create');
